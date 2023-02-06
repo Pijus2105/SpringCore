@@ -22,6 +22,12 @@ public class DSLRcameraApp {
 		DSLRpacket DP = (DSLRpacket) AP.getBean("DSLRpacket");
 		
 		System.out.println(DP);
+		
+		System.out.println("++++++++++++++++++++++++++++++++++");
+		
+		DSLRlens lens = (DSLRlens) AP.getBean("lens255");
+		
+		System.out.println(lens);
 
 	}
 

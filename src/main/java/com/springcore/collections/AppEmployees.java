@@ -10,7 +10,7 @@ public class AppEmployees {
 
 		ApplicationContext AP = new ClassPathXmlApplicationContext("com/springcore/collections/collectionsconfig.xml");
 		
-		Employees emp = (Employees) AP.getBean("Employees");
+		Employees emp = AP.getBean("Employees", Employees.class);
 		
 		System.out.println(emp.getEmployeesName());
 		System.out.println(emp.getEmployeesPhone());
