@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="
+            http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+            http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+            ">
+<!-- List-->
+  <util:list list-class="java.util.LinkedList" id="MyEmployee">
+	
+	   <value> Angshuman </value>
+	   <value> Dibyendu </value>
+	</util:list> 
+	
+	<!-- Set --> 
+	
+	<util:set set-class="java.util.HashSet" id="MyWork">
+		<value> Developer </value>
+		<value> QA </value>
+	</util:set>
+	
+	<!-- Map -->
+    <util:map map-class="java.util.HashMap" id="MySalary">
+		
+		<entry key="Developer" value="40000"/>
+		<entry key="QA" value="50000"/>
+		
+	</util:map>   
+	
+	<!-- Properties -->
+	<util:properties id="MyProperty">
+		<prop key="Bike"> Hero </prop>
+		<prop key="Car"> Mahindra </prop>
+		
+	</util:properties>
+	
+  <bean class="com.springcore.standalone.collections.EmployeeApp" name="employeesName">
+	  
+	  <property name="employeeName" ref="MyEmployee"/>
+	  <property name="employessWork" ref="MyWork"/>
+	  <property name="employeesFSalary" ref="MySalary"/>
+	  <property name="prop" ref="MyProperty"/>
+	  
+  </bean>
+  
+   
+   
+    <!-- bean definitions here -->
+
+</beans>
